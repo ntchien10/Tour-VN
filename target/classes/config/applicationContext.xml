@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/jee
+    	http://www.springframework.org/schema/jee/spring-jee-2.5.xsd">
+
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"
+		scope="singleton">
+		<property name="jndiName" value="java:comp/env/jdbc/OracleDS" />
+		<property name="resourceRef" value="true" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- mybatis session factory -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:config/mybatisConfig.xml"/>
+	</bean>
+	
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- mybatis scanning for mappers -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="vhc.vtqt.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+	<bean id="rpChargePackageMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.RpChargePackageMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="rpChargePackageDetailMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.RpChargePackageDetailMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="rpCdrDataCallMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.RpCdrDataCallMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="sysPartnerMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.SysPartnerMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="sysCountryMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.SysCountryMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="sysJobConfigurationMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.SysJobConfigurationMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="rpCdrDataSmsMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.RpCdrDataSmsMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="dyRpSmsCdrDataMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.DyRpSmsCdrDataMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="dyRpSmsMoOverviewMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.DyRpSmsMoOverviewMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="ccdcQuanLyCcdcMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.CcdcQuanLyCcdcMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="ccdcLsPhanBoChiPhiMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.CcdcLsPhanBoChiPhiMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean> 
+	<bean id="ccdcLsDieuChuyenMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.CcdcLsDieuChuyenMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="compareMbfPartnerMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.CompareMbfPartnerMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean> 
+	<bean id="cdrMbfMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.CdrMbfMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="cdrPartnerMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="vhc.vtqt.dao.CdrPartnerMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+
+	<bean id="rpChargePackageService" class="vhc.vtqt.service.impl.RpChargePackageServiceImpl">
+		<property name="rpChargePackageMapper" ref="rpChargePackageMapper" />
+	</bean>
+	<bean id="rpChargePackageDetailService" class="vhc.vtqt.service.impl.RpChargePackageServiceImpl">
+		<property name="rpChargePackageDetailMapper" ref="rpChargePackageDetailMapper" />
+	</bean>
+	<bean id="rpCdrDataCallService" class="vhc.vtqt.service.impl.RpCdrDataCallServiceImpl">
+		<property name="rpCdrDataCallMapper" ref="rpCdrDataCallMapper" />
+	</bean>
+	<bean id="sysPartnerService" class="vhc.vtqt.service.impl.RpCdrDataCallServiceImpl">
+		<property name="sysPartnerMapper" ref="sysPartnerMapper" />
+	</bean>
+	<bean id="sysCountryService" class="vhc.vtqt.service.impl.RpCdrDataCallServiceImpl">
+		<property name="sysCountryMapper" ref="sysCountryMapper" />
+	</bean>
+	<bean id="sysJobConfigurationService" class="vhc.vtqt.service.impl.SysJobConfigurationServiceImpl">
+		<property name="sysJobConfigurationMapper" ref="sysJobConfigurationMapper" />
+	</bean>
+	<bean id="rpCdrDataSmsService" class="vhc.vtqt.service.impl.RpCdrDataSmsServiceImpl">
+		<property name="rpCdrDataSmsMapper" ref="rpCdrDataSmsMapper" />
+	</bean>
+	<bean id="dyRpCdrDataSmsService" class="vhc.vtqt.service.impl.RpCdrDataSmsServiceImpl">
+		<property name="dyRpSmsCdrDataMapper" ref="dyRpSmsCdrDataMapper" />
+	</bean>
+	<bean id="dySmsMoOverviewService" class="vhc.vtqt.service.impl.RpCdrDataSmsServiceImpl">
+		<property name="dyRpSmsMoOverviewMapper" ref="dyRpSmsMoOverviewMapper" />
+	</bean>
+	<bean id="compareMbfPartnerService" class="vhc.vtqt.service.impl.CompareMbfPartnerServiceImpl">
+		<property name="compareMbfPartnerMapper" ref="compareMbfPartnerMapper" />
+	</bean>
+	<bean id="cdrMbfService" class="vhc.vtqt.service.impl.CdrMbfServiceImpl">
+		<property name="cdrMbfMapper" ref="cdrMbfMapper" />
+	</bean>
+	<bean id="cdrPartnerService" class="vhc.vtqt.service.impl.CdrPartnerServiceImpl">
+		<property name="cdrPartnerMapper" ref="cdrPartnerMapper" />
+	</bean>
+	<bean id="ccdcQuanLyCcdcService" class="vhc.vtqt.service.impl.CcdcQuanLyCcdcServiceImpl">
+		<property name="ccdcQuanLyCcdcMapper" ref="ccdcQuanLyCcdcMapper" />
+	</bean>
+	<bean id="ccdcLsPhanBoChiPhiService" class="vhc.vtqt.service.impl.CcdcLsPhanBoChiPhiImpl">
+		<property name="ccdcLsPhanBoChiPhiMapper" ref="ccdcLsPhanBoChiPhiMapper" />
+	</bean>
+	<bean id="ccdcLsDieuChuyenService" class="vhc.vtqt.service.impl.CcdcLsDieuChuyenImpl">
+		<property name="ccdcLsDieuChuyenMapper" ref="ccdcLsDieuChuyenMapper" />
+	</bean>
+	
+	<bean id="sysUserService" class="vhc.vtqt.service.impl.SysUserServiceImpl" />
+	<bean id="sysCtkvService" class="vhc.vtqt.service.impl.SysCtkvServiceImpl" />
+	<bean id="summaryDataCtkvService" class="vhc.vtqt.service.impl.SummaryDataCtkvServiceImpl" />
+	<bean id="sysParameterService" class="vhc.vtqt.service.impl.SysParameterServiceImpl" />
+	<bean id="dyCdrDataCallService" class="vhc.vtqt.service.impl.DyCdrDataCallServiceImpl" />
+	<bean id="dyRpCallInOutService" class="vhc.vtqt.service.impl.DyRpCallInOutServiceImpl" />
+	<bean id="cdrDataCallService" class="vhc.vtqt.service.impl.CdrDataCallServiceImpl" />
+	<bean id="scheduleSendMailService" class="vhc.vtqt.service.impl.ScheduleSendMailServiceImpl" />
+	<bean id="dyRpSmsCdrDataGtService" class="vhc.vtqt.service.impl.DyRpSmsCdrDataGtServiceImpl" />
+	<bean id="smsPnService" class="vhc.vtqt.service.impl.SmsPnServiceImpl" />
+	<bean id="dyRpSmsCdrDatService" class="vhc.vtqt.service.impl.DyRpSmsCdrDatServiceImpl" />
+	<bean id="ccdcQuanLyCcService" class="vhc.vtqt.service.impl.CcdcQuanLyCcdcServiceImpl" />
+	<bean id="ccdcLsPhanBoChiPhService" class="vhc.vtqt.service.impl.CcdcLsPhanBoChiPhiImpl" />
+	<bean id="ccdcLsDieuChuyeService" class="vhc.vtqt.service.impl.CcdcLsDieuChuyenImpl" />
+	<bean id="dyRpCdrDataCallForwardService" class="vhc.vtqt.service.impl.DyRpCdrDataCallForwardServiceImpl" />
+	<bean id="callPrefixServiceDataService" class="vhc.vtqt.service.impl.CallPrefixServiceDataServiceImpl" />
+	<bean id="sysCountryRoutingService" class="vhc.vtqt.service.impl.SysCountryServiceImpl" />
+	<bean id="callCdrDataRoutingService" class="vhc.vtqt.service.impl.CallCdrDataRoutingServiceImpl" />
+	<bean id="compareMbfPnService" class="vhc.vtqt.service.impl.CompareMbfPartnerServiceImpl" /> 
+	<bean id="cdrMbiService" class="vhc.vtqt.service.impl.CdrMbfServiceImpl" /> 
+	<bean id="cdrPnService" class="vhc.vtqt.service.impl.CdrPartnerServiceImpl" />
+	
+	<bean id="kpiRpCdrDataCallService" class="vhc.vtqt.service.impl.KpiRpCdrDataCallServiceImpl" />
+	
+	<!--Tien  -->
+	<bean id="callRateService" class="vhc.vtqt.service.impl.CallRateServiceImpl" />
+	<bean id="sysPartnersService" class="vhc.vtqt.service.impl.SysPartnersServiceImpl" />
+	<bean id="phongBanService" class="vhc.vtqt.service.impl.PhongBanServiceImpl" />
+	<bean id="sysGroupUserService" class="vhc.vtqt.service.impl.SysGroupUserServiceImpl" />
+	<bean id="sysMenuService" class="vhc.vtqt.service.impl.SysMenuServiceImpl" />
+	<bean id="sysResponsibilitiesService" class="vhc.vtqt.service.impl.SysResponsibilitiesServiceImpl" />
+	<bean id="usersCogencyLevelService" class="vhc.vtqt.service.impl.UsersCogencyLevelServiceImpl" />
+	<bean id="sysUserRolesService" class="vhc.vtqt.service.impl.SysUserRolesServiceImpl" />
+	
+	<!--CVQT  -->
+	<bean id="rpContractIOTService" class="vhc.vtqt.service.impl.RpContractIOTServiceImpl" />
+	
+	<!-- Viet -->
+	<bean id="baoCaoTlsdCvqtService" class="vhc.vtqt.service.impl.BaoCaoTlsdCvqtServiceImpl" />
+	
+	<!-- Thuc -->
+	<bean id="cvqtContractService" class="vhc.vtqt.service.impl.CvqtContractServiceImpl" />
+	
+	<bean id="cvqtInboundOutboundService" class="vhc.vtqt.service.impl.CvqtInboundOutboundServiceImpl" />
+	<bean id="irPlmnService" class="vhc.vtqt.service.impl.IrPlmnServiceImpl" />
+	
+	<bean id="dyDataInboundService" class="vhc.vtqt.service.impl.DyDataInboundServiceImpl" />
+	<bean id="dyDataOutboundService" class="vhc.vtqt.service.impl.DyDataOutboundServiceImpl" />
+	
+	<!-- Doai - begin -->
+		<!-- softsim  -->
+	<bean id="reportSoftSimService" class="vhc.vtqt.service.impl.ReportSoftSimServiceImpl" />
+	
+		<!-- bao cao ldr -->
+	<bean id="reportLdrService" class="vhc.vtqt.service.impl.ReportLdrServiceImpl" />
+	
+		<!-- bao cao volume commitment -->
+	<bean id="volumeCommitmentService" class="vhc.vtqt.service.impl.VolumeCommitmentServiceImpl" />	
+	
+		<!-- bao cao MobiWifi -->
+	<bean id="reportMobiWifiService" class="vhc.vtqt.service.impl.ReportMobiWifiServiceImpl" />	
+	
+	<!-- Doai - end -->
+	
+	<bean id="softSimPartnerService" class="vhc.vtqt.service.impl.SoftSimPartnerServiceImpl" />
+	
+	<!-- Hiếu -->
+	<bean id="sysSoftSimPartnerService" class="vhc.vtqt.service.impl.SysSoftSimPartnerServiceImpl" />
+	<bean id="sysFirstNumberPartnerService" class="vhc.vtqt.service.impl.SysFirstNumberPartnerServiceImpl" />
+	<bean id="sysSoftSimInfoService" class="vhc.vtqt.service.impl.SysSoftSimInfoServiceImpl" />
+	<bean id="QuanLyDichVuService" class="vhc.vtqt.service.impl.QuanLyDichVuServiceImpl" />
+	<bean id="phanTachDoanhThuService" class="vhc.vtqt.service.impl.PhanTachDoanhThuServiceImpl" />
+	<bean id="giamSatDoiTacSoftSimService" class="vhc.vtqt.service.impl.GiamSatDoiTacSoftSimServiceImpl" />
+	<bean id="baoCaoChenhLechThuChiService" class="vhc.vtqt.service.impl.BaoCaoChenhLechThuChiServiceImpl" />
+	
+	<!-- thuonght -->
+	<bean id="SysItfsInfoService" class="vhc.vtqt.service.impl.SysItfsInfoServiceImpl" />
+	
+	<bean id="sysLdrInfoService" class="vhc.vtqt.service.impl.SysLdrInfoServiceImpl" />
+	<bean id="kpiRpCdrDataCallP3Service" class="vhc.vtqt.service.impl.KpiRpCdrDataCallP3ServiceImpl" />
+	
+	<!-- Tiendn -->
+	<bean id="sysBlacklistService" class="vhc.vtqt.service.impl.SysBlacklistServiceImpl" />
+	<bean id="sysDatamallInfoService" class="vhc.vtqt.service.impl.SysDatamallInfoServiceImpl" />
+	<bean id="reportDatamallService" class="vhc.vtqt.service.impl.ReportDatamallServiceImpl" />
+	<bean id="rpKiemSoatNdSmsA2pService" class="vhc.vtqt.service.impl.RpKiemSoatNdSmsA2pServiceImpl" />
+	<bean id="rpSlDtSmsA2pDetailService" class="vhc.vtqt.service.impl.RpSlDtSmsA2pDetailServiceImpl" />
+	<bean id="smsPnBrnService" class="vhc.vtqt.service.impl.SmsPnBrnServiceImpl" />
+	<bean id="cauHinhCanhBaoSmsA2pService" class="vhc.vtqt.service.impl.CauHinhCanhBaoSmsA2pServiceImpl" />
+	<bean id="smsDtttChieuDiService" class="vhc.vtqt.service.impl.SmsDtttChieuDiServiceImpl" />
+	<bean id="wholesaleService" class="vhc.vtqt.service.impl.WholesaleServiceImpl" />
+	<bean id="smsDtttChieuDiDetailService" class="vhc.vtqt.service.impl.SmsDtttChieuDiDetailServiceImpl" />
+	<!-- Doai - bao cao chot thang -->
+	<bean id="chotThangService" class="vhc.vtqt.service.impl.ChotThangServiceImpl" />
+	
+	<bean id="rpCdrDataCallOnnetService" class="vhc.vtqt.service.impl.RpCdrDataCallOnnetServiceImpl" />
+	<bean id="phanTachGoiCuocCtkvService" class="vhc.vtqt.service.impl.PhanTachGoiCuocCtkvServiceImpl" />
+	<bean id="vhcReportIgwDataService" class="vhc.vtqt.service.impl.VhcReportIgwDataServiceImpl" />
+	<bean id="vDashboardSmsService" class="vhc.vtqt.service.impl.VDashboardSmsServiceImpl" />
+	<bean id="SmsCdrDataRouterLogService" class="vhc.vtqt.service.impl.SmsCdrDataRouterLogServiceImpl" />
+	<bean id="luuLuongThoaiQtService" class="vhc.vtqt.service.impl.LuuLuongThoaiQtServiceImpl" />
+	<bean id="sysFileService" class="vhc.vtqt.service.impl.SysFileServiceImpl" />
+	
+	<!-- Chien -->
+	<bean id="outBoundService" class="vhc.vtqt.service.impl.OutBoundServiceImpl" />
+	<bean id="sysGoiCuocCvqt" class="vhc.vtqt.service.impl.SysGoiCuocCvqtServiceImpl" />
+	<bean id="rpSlDtGcCvqtOutDailyService" class="vhc.vtqt.service.impl.RpSlDtGcCvqtOutDailyServiceImpl" />
+	<bean id="rpImsiLuService" class="vhc.vtqt.service.impl.RpImsiLuServiceImpl" />
+	<bean id="rpHdckCvqtService" class="vhc.vtqt.service.impl.RpHdckCvqtServiceImpl" />
+
+	<!--  Dong-Bao Cao-->
+	<bean id="rpGcCvqtOutboundLuotDkyService" class="vhc.vtqt.service.impl.RpGcCvqtOutboundLuotDkyServiceImpl" />
+	<bean id="sysGoiCuocCvqtService" class="vhc.vtqt.service.impl.SysGoiCuocCvqtServiceImpl" />
+	<bean id="rpDataTbCvqtService" class="vhc.vtqt.service.impl.RpDataTbCvqtServiceImpl" />	
+	<bean id="rpDataTbCvqtDetailService" class="vhc.vtqt.service.impl.RpDataTbCvqtDetailServiceImpl" />	
+	
+	<bean id="importEmailGlcService" class="vhc.vtqt.service.impl.ImportEmailGlcServiceImpl" />	
+	<bean id="rpDtDichVuDcbService" class="vhc.vtqt.service.impl.RpDtDichVuDcbServiceImpl" />	
+	<bean id="rpSimboxDailyService" class="vhc.vtqt.service.impl.RpSimboxDailyServiceImpl" />	
+	<bean id="rpDtCpSmsWholesaleService" class="vhc.vtqt.service.impl.RpDtCpSmsWholesaleServiceImpl" />	
+</beans>

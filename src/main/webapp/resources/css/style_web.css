@@ -1,0 +1,231 @@
+@CHARSET "UTF-8";
+
+#header {
+    background: none repeat scroll 0 0 #22529C;
+    padding-bottom: 10px;
+}
+
+#header .heading {
+	font-size: 21px;
+	color: #fff; 
+	font-weight: bold; 
+	line-height: 60px; 
+	text-align: center; 
+	text-shadow: 1px 2px 1px #444;
+}
+
+#menu {
+    background: repeat-x scroll left bottom #3B74C8;
+    box-shadow: 0 1px 4px #1D5077;
+    height: 26px;
+}
+
+#content {
+	padding: 10px 20px;
+	border-top: 2px solid #DDDDDD;
+}
+
+#footer {
+	background: none repeat scroll 0 0 #F5F5F5;
+    border-top: 1px solid #DDDDDD;
+    margin-top: 10px;
+}
+
+#footer .copyright {
+	padding: 10px;
+    text-align: center;
+}
+
+ul#navmenu-h {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.heading {
+	margin-top: 5px;
+}
+
+.tResult {
+	margin-left: 23%;
+    padding-top: 20px;
+}
+
+.small {
+    font-size: 8pt;
+}
+
+#sidebar .block-cat {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: block;
+    margin: 0px 0px 12px;
+}
+
+#sidebar .header-block {
+    background: #F1F1F1;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 5px 0 0 8px;
+}
+
+#sidebar .box-title {
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 6px 12px;
+    background: url("/resources/images/tab-g.png") repeat-x scroll center top #FFFFFF;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-width: 1px 1px 0;
+    margin-bottom: -1px;
+}
+
+#sidebar .content-block {
+    background: url("/resources/images/home-box-bg.gif") repeat-y scroll center top transparent;
+    border-bottom: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    border-radius: 0 0 3px 3px;
+    border-right: 1px solid #DDDDDD;
+    display: block;
+    padding: 5px 10px 10px;
+}
+
+#sidebar .element-box {
+	background: url("/resources/images/red-dot-list.gif") no-repeat scroll 0 10px transparent;
+    border-bottom: 1px dotted #DDDDDD;
+    margin: 3px;
+    padding: 6px 0 6px 10px;
+}
+
+.element-box .count {
+	color: #555555;
+    font-family: Georgia;
+    font-size: 12px;
+}
+
+#sidebar .btnguipa {
+	border-radius: 3px 3px 3px 3px; 
+	border: 1px solid #3079ED; 
+	color: #fff;
+	background-color: #4D90FE;
+    background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
+    font-weight: bold;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+#sidebar .btnguipa:hover {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar .btnguipa a {
+	color: #fff;
+}
+
+#sidebar .btnguipa a:hover {
+	color: #fff;
+}
+
+.heading h1 {
+	font-size: 15px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.heading h2 {
+	
+}
+
+.search-pa {
+	line-height: 23px;
+	margin-bottom: 10px;
+}
+
+#menu .logout {
+	text-align: right;
+}
+
+#menu .logout a {
+	color: #FF4900;
+	padding-right: 10px;
+	font: bold 11px/26px Arial,sans-serif
+}
+
+#menu .username {
+	color: #FFFFFF;
+    text-align: right;
+    font-weight: normal;
+}
+
+#menu .username a {
+	color: #fff;
+	padding-right: 10px;
+	font: bold 11px/26px Arial,sans-serif
+}
+
+#load {
+	display: none;
+	position: absolute;
+	left: 40%;
+	top: 0px;
+	background: url(/resources/images/ajax-loader.gif);
+	width: 220px;
+	height: 19px;
+	text-indent: -9999em;
+}
+
+.boxhead {
+	background-color: #65B8DA;
+    background-image: -moz-linear-gradient(center top , #65B8DA, #65B8DA);
+}
+
+div.collapse {
+    position: relative;
+}
+
+.boxhead a {
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.boxhead h2 {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.boxhead h2 span {
+    clear: right;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font: bold 13px/30px Arial,Calibri,Verdana,Geneva,sans-serif;
+    margin-left: 9px;
+}
+
+.boxhead a.collapse img {
+    clear: left;
+    display: block;
+    float: right;
+    height: 13px;
+    overflow: hidden;
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    width: 13px;
+}
+
+.pakh-top {
+    margin: 2px 0px 6px 0px;
+    box-shadow: 1px 1px 1px #EEEEEE;
+}
+
+.timeLeft {
+  color: red;
+  font-family: times New Roman;
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 5px;
+}

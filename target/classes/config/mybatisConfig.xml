@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	
+<configuration> 
+	
+	<mappers>
+		<mapper resource="vhc/vtqt/dao/xml/SysUserMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpChargePackageMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpChargePackageDetailMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CallAddressMappingMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CallCdrDataCtkvMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DataVtqtCvgtMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/IsdnKhdnDailyMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SmsAddressMappingMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SmsCdrDataCtkvMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysCtkvMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SummaryDataCtkvMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysParameterMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpCdrDataCallMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysPartnerMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysCountryMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DyCdrDataCallMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DyRpCallInOutMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CdrDataCallMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysJobConfigurationMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpCdrDataSmsMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DyRpSmsCdrDataMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DyRpSmsCdrDataGtMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SmsPnMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DyRpSmsMoOverviewMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CcdcQuanLyCcdcMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CcdcLsPhanBoChiPhiMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CcdcLsDieuChuyenMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DyRpCdrDataCallForwardMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CallPrefixServiceDataMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CallCdrDataRoutingMapper.xml" /> 
+		<mapper resource="vhc/vtqt/dao/xml/CdrMbfMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CdrPartnerMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CompareMbfPartnerMapper.xml" />
+		
+		<mapper resource="vhc/vtqt/dao/xml/KpiRpCdrDataCallMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/KpiRpDataLoaiDvMapper.xml" />
+		
+		<!--Tien  -->
+		<mapper resource="vhc/vtqt/dao/xml/CallRateMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysPartnersMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/PhongBanMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysGroupUserMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysMenuMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysResponsibilitiesMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/UsersCogencyLevelMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysUserRolesMapper.xml" />
+		
+		<!--CVQT  -->
+		<mapper resource="vhc/vtqt/dao/xml/RpContractIOTMapper.xml" />
+		
+		<!--Viet  -->
+		<mapper resource="vhc/vtqt/dao/xml/BaoCaoTlsdCvqtMapper.xml" />
+		
+		<!--Thuc-->		
+		<mapper resource="vhc/vtqt/dao/xml/CvqtContractMapper.xml" />
+		
+		<mapper resource="vhc/vtqt/dao/xml/CvqtInboundOutboundMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/IrPlmnMapper.xml" />
+		
+		<mapper resource="vhc/vtqt/dao/xml/DyDataInboundMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/DyDataOutboundMapper.xml" />
+		
+		<!-- PT Nga -->
+		<mapper resource="vhc/vtqt/dao/xml/SysSoftSimPartnerMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysFirstNumberPartnerMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysSoftSimInfoMapper.xml" />
+		
+		<!-- Doai - softsim - begin -->
+		<!-- Doai - begin -->
+			<!-- softsim  -->
+		<mapper resource="vhc/vtqt/dao/xml/ReportSoftSimMapper.xml" />
+			<!-- bao cao ldr -->
+		<mapper resource="vhc/vtqt/dao/xml/ReportLdrMapper.xml" />
+			<!-- bao cao volume commitment -->
+		<mapper resource="vhc/vtqt/dao/xml/VolumeCommitmentMapper.xml" />
+			<!-- bao cao MobiWifi -->
+		<mapper resource="vhc/vtqt/dao/xml/ReportMobiWifiMapper.xml" />
+		<!-- Doai - end -->
+		
+		<!--Hiếu-->
+		<mapper resource="vhc/vtqt/dao/xml/SysSoftSimPartnerMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysSoftSimInfoMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/quanlyDichVuMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/PhanTachDoanhThuMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/GiamSatDoiTacSoftSimMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/BaoCaoChenhLechThuChiMapper.xml" />
+		
+		<!--thuonght-->
+		<mapper resource="vhc/vtqt/dao/xml/SysItfsInfoMapper.xml" />
+		
+		<mapper resource="vhc/vtqt/dao/xml/SysLdrInfoMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/KpiRpCdrDataCallP3Mapper.xml" />
+		
+		<!-- Tiendn -->
+		<mapper resource="vhc/vtqt/dao/xml/SysBlacklistMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysDatamallInfoMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpKiemSoatNdSmsA2pMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpSlDtSmsA2pDetailMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SmsPnBrnMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/CauHinhCanhBaoSmsA2pMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/WholesaleMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SmsDtttChieuDiMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SmsDtttChieuDiDetailMapper.xml" />
+		<!-- Doai - bao cao chot thang  -->
+		<mapper resource="vhc/vtqt/dao/xml/ChotThangMapper.xml" />
+		
+		<mapper resource="vhc/vtqt/dao/xml/RpCdrDataCallOnnetMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/PhanTachGoiCuocCtkvMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/VhcReportIgwDataMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/VDashboardSmsMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SmsCdrDataRouterLogMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/LuuLuongThoaiQtMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/SysFileMapper.xml" />
+		
+		<!--chien-->
+		<mapper resource="vhc/vtqt/dao/xml/RpSlDtGcCvqtOutboundMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpSlDtGcCvqtOutDailyMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpImsiLuMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpHdckCvqtMapper.xml" />
+		
+		<!-- Dong- bao cao -->
+
+		<mapper resource="vhc/vtqt/dao/xml/SysGoiCuocCvqtMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpGcCvqtOutboundLuotDkyMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpDataTbCvqtMapper.xml" />	
+		<mapper resource="vhc/vtqt/dao/xml/RpDataTbCvqtDetailMapper.xml" />
+		
+		<mapper resource="vhc/vtqt/dao/xml/ImportEmailGlcMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpDtDichVuDcbMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpSimboxDailyMapper.xml" />
+		<mapper resource="vhc/vtqt/dao/xml/RpDtCpSmsWholesaleMapper.xml" />
+	</mappers>
+</configuration>

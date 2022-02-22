@@ -1,0 +1,107 @@
+table.simple {
+	width: 100%
+}
+
+/* This is the style for the informational messages presented to the user */
+
+div.error, div.message {
+    /* background: #ffc;
+    border: 1px solid #000;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    font-weight: normal;
+    margin: 10px auto;
+    padding: 3px;
+    text-align: left;
+    vertical-align: bottom; */
+}
+
+/* use a different color for the errors */
+div.error {
+	border: 2px solid red;
+}
+
+img.validationWarning,
+div.errors img.icon, 
+div.messages img.icon {
+    border: 0;
+    width: 14px;
+    height: 13px;
+    vertical-align: top;
+}
+
+div.message a {
+    background: transparent;
+    color: #0000FF;
+}
+
+div.message a:visited {
+    background: transparent;
+    color: #0000FF;
+}
+
+div.message a:hover {
+    background: transparent;
+    color: #008000;
+}
+
+div.message a:active {
+    text-decoration: underline overline;
+}
+
+div.message img.icon {
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.e_sm #gt-bbar-c {
+    top: -24px;
+}
+#gt-bbar-c {
+    position: absolute;
+    text-align: center;
+    top: -20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.goog-inline-block {
+    display: inline-block;
+    margin: 5px 10px 10px !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.jfk-butterBar-shown {
+    -moz-transition: opacity 0.218s ease 0s;
+    border-width: 1px;
+    border-style: solid;
+    opacity: 1;
+    padding: 6px 12px;
+    visibility: visible;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    cursor: pointer;
+    display: table;
+}
+.jfk-butterBar-info {
+    background-color: #F9EDBE;
+    border-color: #F0C36D;
+    color: #333333;
+}
+.jfk-butterBar {
+
+}
+
+a#gt-bbar-dm, a#gt-bbar-lm, a#gt-bbar-lm:visited {
+    color: #333333;
+    padding-left: 0.8em;
+    text-decoration: underline;
+}
+#gt-c a {
+    color: #1155CC;
+    text-decoration: none;
+}

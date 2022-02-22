@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+table.simple {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 4px 0;
+}
+table.simple tbody tr:hover {
+    background-color: #DDFFCC;
+}
+table.simple thead tr {
+    background-color: #F1F1F1;
+    border: 1px solid #DEDEDE;
+}
+table.simple th {
+	border: 0 none !important;
+    font-weight: bold;
+    /*background-color: #eeeeee;*/
+}
+table.simple .master-reportheader {
+    font-weight: bold;
+    text-align: center;
+}
+table.simple td, table.simple th {
+    border: 1px solid #DDDDDD;
+    color: #000000;
+    padding: 4px 5px;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+table.simple td.margin, table.simple th.margin {
+    border-width: 1px 4px 0 0;
+}
+table.simple .master-header-1 {
+    background-color: #EEEEEE;
+}
+table.simple .master-header-2 {
+    background-color: #FFFF99;
+}
+table.simple .master-header-3 {
+    background-color: #FFFFCC;
+}
+table.simple .master-header-4 {
+    background-color: #FCD5B5;
+}
+table.simple .master-header-5 {
+    background-color: #EEE123;
+}
+table.simple .master-header-6 {
+    background-color: #FFFF98;
+}
+table.simple .master-header-7 {
+    background-color: #FFFFC7;
+}
+table.simple .master-header-8 {
+    background-color: #FCD5B6;
+}
+table.simple tr.TT2 {
+    background-color: #538ED5;
+    font-weight: bold;
+}
+table.simple tr.TT6 {
+    background-color: yellow;
+    font-weight: bold;
+}
+table.simple td.number-column{
+    text-align: right;
+}
+table.simple td.string-column{
+    text-align: left;
+}
+table.form{
+    width:100%;
+    margin: 10px;
+}

@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="ojdbc6.jar" />
+	
+	<!-- java -jar mybatis-generator-core-1.3.1.jar -configfile generatorConfig.xml -overwrite -tables table_name -->
+
+	<context id="MysqlTables" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@192.168.1.226:1521:vhc" userId="vtqt" password="vtqt123">
+		</jdbcConnection>
+		
+		<javaModelGenerator targetPackage="vhc.vtqt.domain"
+			targetProject="../../java" />
+	
+		<sqlMapGenerator targetPackage="vhc.vtqt.dao.xml"
+			targetProject="../../java" />
+		
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="vhc.vtqt.dao" targetProject="../../java" />
+    	
+    	<table tableName="SYS_USERS" domainObjectName="SysUser"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="USERNAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PASSWORD" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="FULLNAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SEX" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PHONE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EMAIL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOGIN_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IS_ENABLE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DESCRIPTION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="V_RP_CHARGE_PACKAGE" domainObjectName="RpChargePackage"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="CHARGE_PRICE" javaType="Long" />
+			<columnOverride column="REGISTED_DAY" javaType="Integer" />
+			<columnOverride column="REGISTED_MONTH" javaType="Integer" />
+			<columnOverride column="REGISTED_YEAR" javaType="Integer" />
+			<columnOverride column="CHARGE_PRICE" javaType="Integer" />
+			<columnOverride column="REVENUE" javaType="Long" />
+			<columnOverride column="COM_1" javaType="Integer" />
+			<columnOverride column="COM_2" javaType="Integer" />
+			<columnOverride column="COM_3" javaType="Integer" />
+			<columnOverride column="COM_4" javaType="Integer" />
+			<columnOverride column="COM_5" javaType="Integer" />
+			<columnOverride column="COM_6" javaType="Integer" />
+			<columnOverride column="COM_7" javaType="Integer" />
+			<columnOverride column="COM_8" javaType="Integer" />
+			<columnOverride column="COM_9" javaType="Integer" />
+
+		</table>
+		<table tableName="V_RP_CHARGE_PACKAGE_DETAIL" domainObjectName="RpChargePackageDetail"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="CHARGE_PRICE" javaType="Long" />
+			<columnOverride column="CENTER_CODE" javaType="Integer" />
+			<columnOverride column="EXTEND_NUM" javaType="Integer" />
+			<columnOverride column="SERVICE_CODE" javaType="Integer" />
+		</table>
+		<table tableName="CALL_CDR_DATA_CTKV" domainObjectName="CallCdrDataCtkv"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="FILE_ID" javaType="Integer" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DURATION" javaType="Integer" />
+			<columnOverride column="CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CHARGE_CREDIT" javaType="Integer" />
+			<columnOverride column="CHARGE_BONUS" javaType="Integer" />
+			<columnOverride column="ACCOUNT_PROFILE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOCATION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MOB_TYPE_ID" javaType="Integer" />
+			<columnOverride column="SWITCH_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="RATE_INDICATOR" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CELL_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SUB_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EVENT_TYPE_NAME" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="DATA_VTQT_CVQT" domainObjectName="DataVtqtCvgt"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ISDN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MOB_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROFILE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SERVICE_CODE" javaType="Integer" />
+			<columnOverride column="GROUP_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CHARGE_PRICE" javaType="Integer" />
+			<columnOverride column="REG_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EXTEND_NUM" javaType="Integer" />
+			<columnOverride column="BUS_GROUP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROGRAM_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EXTEND_STATUS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CENTER_CODE" javaType="Integer" />
+			<columnOverride column="CONTACT_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CONTACT_ADDRESS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PAY_FULL_ADDRESS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROVINCE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISTRICT" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PRECINCT" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="SMS_CDR_DATA_CTKV" domainObjectName="SmsCdrDataCtkv"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="FILE_ID" javaType="Integer" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOCATION_ID" javaType="Integer" />
+			<columnOverride column="CHARGE_CREDIT" javaType="Integer" />
+			<columnOverride column="ACCOUNT_PROFILE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOCATION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DOM_CHARGE" javaType="Integer" />
+			<columnOverride column="SUB_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CELL_ID" javaType="Integer" />
+		</table>
+		<table tableName="ISDN_KHDN_DAILY" domainObjectName="IsdnKhdnDaily"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ISDN" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="CALL_ADDRESS_MAPPING" domainObjectName="CallAddressMapping"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="CENTER" javaType="Integer" />
+			<columnOverride column="PROVINCE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROVINCE_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROVINCE_NUMBER" javaType="Integer" />
+			<columnOverride column="DISTRICT" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISTRICT_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISTRICT_NUMBER" javaType="Integer" />
+			<columnOverride column="CELL_NAME_PREFIX" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOCATION_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROVINCE_BILL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISTRICT_BILL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOCATION_NUMBER_VNP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="BRANCH_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="BRANCH_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CENTER_TO_2014" javaType="Integer" />
+			<columnOverride column="CENTER_FROM_2015" javaType="Integer" />
+			<columnOverride column="BRANCH_CODE_FROM_2015" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="BRANCH_NAME_FROM_2015" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ZONE_RG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ZONE_CT" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="SMS_ADDRESS_MAPPING" domainObjectName="SmsAddressMapping"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="CGI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOCATION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CENTER" javaType="Integer" />
+			<columnOverride column="CENTER_FROM_2015" javaType="Integer" />
+			<columnOverride column="PROVINCE_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROVINCE_NUMBER" javaType="Integer" />
+			<columnOverride column="DISTRICT_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISTRICT_NUMBER" javaType="Integer" />
+			<columnOverride column="PROVINCE_BILL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISTRICT_BILL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="BRANCH_CODE_FROM_2015" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="BRANCH_NAME_FROM_2015" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ZONE_RG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ZONE_CT" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="SYS_CTKV" domainObjectName="SysCtkv"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="CODE" javaType="Integer" />
+			<columnOverride column="NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="SUMMARY_DATA_CTKV" domainObjectName="SummaryDataCtkv"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="CENTER_ID" javaType="Integer" />
+			<columnOverride column="CUSTOMER_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISTRICT" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PROVINCE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY_DEST" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_NO" javaType="Integer" />
+			<columnOverride column="CALL_QUANTITY" javaType="Integer" />
+			<columnOverride column="CALL_CHARGE_CREDIT" javaType="Integer" />
+			<columnOverride column="SMS_NO" javaType="Integer" />
+			<columnOverride column="SMS_QUANTITY" javaType="Integer" />
+			<columnOverride column="SMS_CHARGE_CREDIT" javaType="Integer" />
+			<columnOverride column="DATA_NO" javaType="Integer" />
+			<columnOverride column="DATA_QUANTITY" javaType="Integer" />
+			<columnOverride column="DATA_CHARGE_CREDIT" javaType="Integer" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="UPDATED_BY" javaType="String" jdbcType="VARCHAR" />
+		</table>
+
+		<table tableName="SYS_PARAMETER" domainObjectName="SysParameter"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="VALUE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ORDERING" javaType="Integer" />
+			<columnOverride column="DATA_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="REMARK" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EXP" javaType="String" jdbcType="VARCHAR" />
+		</table>
+
+		<table tableName="DY_CDR_DATA_CALL" domainObjectName="DyCdrDataCall"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="IN_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY_TO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_DURATION" javaType="Integer" />
+			<columnOverride column="RATE" javaType="Integer" />
+			<columnOverride column="COUNTRY_FROM" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TYPE" javaType="String" jdbcType="VARCHAR" />
+		</table>
+
+		<table tableName="DY_RP_CALL_IN_OUT" domainObjectName="DyRpCallInOut"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="IN_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUT_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DESTINATION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="QUANTITY" javaType="Integer" />
+		</table>
+
+		<table tableName="CDR_DATA_CALL" domainObjectName="CdrDataCall"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+
+			<columnOverride column="RECORD_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="GATEWAY_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TIME_ZONE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="START_TIME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_DURATION" javaType="Integer" />
+			<columnOverride column="DISCONNECT_REASON" javaType="Integer" />
+			<columnOverride column="SERVICE_DELIVERE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="INGRESS_TRUNK_GROUP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DIALED_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DISCONNECT_INITIATOR" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EGRESS_TRUNK_GROUP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OVERLOAD_STATUS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TRANS_TYPE1" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TRANS_TYPE2" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EGRESS_LOCAL_IP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EGRESS_REMOTE_IP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="INGRESS_LOCAL_IP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="INGRESS_REMOTE_IP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IN_CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_DURATION_ROUNDUP" javaType="Integer" />
+			<columnOverride column="CALL_DURATION_ROUNDOWN" javaType="Integer" />
+			<columnOverride column="COUNTRY_TO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IN_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUT_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY_FROM" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="V_JOB_CONFIGURATION" domainObjectName="SysJobConfiguration"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="FLOW_RATE" javaType="Integer"  />
+			<columnOverride column="ACCEPTED_THRESHOLD" javaType="Integer" />
+			<columnOverride column="CURRENT_RATE" javaType="Double" />
+			<columnOverride column="ALARM_THRESHOLD" javaType="Double" />
+			<columnOverride column="ENABLE" javaType="Integer"/>
+		</table>
+
+		<table tableName="V_RP_CDR_DATA_SMS" domainObjectName="RpCdrDataSms"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="REVENUE" javaType="Double"  />
+			<columnOverride column="QUANTITY" javaType="LONG" />
+			<columnOverride column="SUCCESS_RATE" javaType="Double" />
+			<columnOverride column="P2P_REVENUE" javaType="Double"  />
+			<columnOverride column="P2P_QUANTITY" javaType="Long" />
+			<columnOverride column="P2P_SUCCESS_RATE" javaType="Double" />
+			<columnOverride column="A2P_REVENUE" javaType="Double"  />
+			<columnOverride column="A2P_QUANTITY" javaType="Long" />
+			<columnOverride column="A2P_SUCCESS_RATE" javaType="Double" />
+		</table>
+
+		<table tableName="DY_RP_SMS_CDR_DATA" domainObjectName="DyRpSmsCdrData"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ZONE_ID" javaType="Integer" />
+			<columnOverride column="RATE" javaType="Double" />
+			<columnOverride column="SUCCESS_QUANTITY" javaType="Long" />
+			<columnOverride column="FAILED_QUANTITY" javaType="Long" />
+		</table>
+
+		<table tableName="DY_RP_SMS_CDR_DATA_GT" domainObjectName="DyRpSmsCdrDataGt"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="PN_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SMSC_GT" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SMS_MODE" javaType="Integer" />
+			<columnOverride column="QUANTITY" javaType="Long" />
+			<columnOverride column="REVENUE" javaType="Long" />
+		</table>
+
+		<table tableName="SMS_PN" domainObjectName="SmsPn"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="PN_ID" javaType="Integer" />
+			<columnOverride column="PN_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="METHOD" javaType="Integer" />
+		</table>
+		
+		<table tableName="CDR_MBF" domainObjectName="CdrMbf"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+ 
+			<columnOverride column="CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DURATION" javaType="Integer" />
+		</table>
+		
+		 <table tableName="CDR_PARTNER" domainObjectName="CdrPartner"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+ 
+			<columnOverride column="CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DURATION" javaType="Integer" />
+		</table>
+		
+		<table tableName="V_COMPARE_MBF_PARTNER" domainObjectName="VCompareMbfPartner"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" > 
+			   
+			<columnOverride column="CALLING_NUMBER_MBF" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER_MBF" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DURATION_MBF" javaType="Integer" />
+			<columnOverride column="CALLING_NUMBER_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DURATION_PARTNER" javaType="Integer" /> 
+			<columnOverride column="DELTA" javaType="Integer" /> 
+			<columnOverride column="COMPARE_DURATION" javaType="Integer" />
+		</table>
+		
+		<table tableName="CCDC_LS_DIEU_CHUYEN" domainObjectName="CcdcLsDieuChuyen"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" > 
+			   
+			<columnOverride column="MA_CCDC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DIEU_CHUYEN_TU_DV" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DIEU_CHUYEN_DEN_DV" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TG_DIEU_CHUYEN"  />
+			<columnOverride column="GIA_TRI_PHAN_BO" javaType="Integer" />
+			<columnOverride column="NGUOI_DIEU_CHUYEN" javaType="String" jdbcType="VARCHAR" /> 
+		</table>
+		
+		<table tableName="CCDC_LS_PHAN_BO_CHI_PHI" domainObjectName="CcdcLsPhanBoChiPhi"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" > 
+			   
+			<columnOverride column="MA_CCDC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LAN_PHAN_BO" javaType="Integer" />
+			<columnOverride column="TY_LE_CHI_PHI" javaType="Integer" />
+			<columnOverride column="SO_TIEN" javaType="Integer" />
+			<columnOverride column="NGAY_PHAN_BO"  />
+			<columnOverride column="NGUOI_PHAN_BO" javaType="String" jdbcType="VARCHAR" /> 
+			<columnOverride column="NGAY_PHAN_BO_DU_KIEN" /> 
+			<columnOverride column="THANG" javaType="Integer" />
+			<columnOverride column="NAM" javaType="Integer" /> 
+		</table>
+
+		<table tableName="DY_RP_SMS_MO_OVERVIEW" domainObjectName="DyRpSmsMoOverview"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="CP_SUM_SL" javaType="Long" />
+			<columnOverride column="CP_SUM_CP" javaType="Long" />
+			<columnOverride column="CP_P2P_SL" javaType="Long" />
+			<columnOverride column="CP_P2P_CP" javaType="Long" />
+			<columnOverride column="CP_P2P_TLTC" javaType="Double" />
+			<columnOverride column="DTTT_SUM_SL" javaType="Long" />
+			<columnOverride column="DTTT_SUM_DT" javaType="Long" />
+			<columnOverride column="DTTT_SS7_SL" javaType="Long" />
+			<columnOverride column="DTTT_SS7_DT" javaType="Long" />
+			<columnOverride column="DTTT_SMPP_SL" javaType="Long" />
+			<columnOverride column="DTTT_SMPP_DT" javaType="Long" />
+		</table>
+
+		<table tableName="DY_RP_CDR_DATA_CALL_FORWARD" domainObjectName="DyRpCdrDataCallForward"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="OUT_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY_TO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_DURATION" javaType="Long" />
+
+		</table>
+
+		<table tableName="CALL_PREFIX_SERVICE_DATA" domainObjectName="CallPrefixServiceData"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="PN_ID" javaType="Integer" />
+			<columnOverride column="PREFIX" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SERVICE_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="QUANTITY" javaType="Long" />
+			<columnOverride column="RATE" javaType="Integer" />
+			<columnOverride column="COUNTRY_TO" javaType="String" jdbcType="VARCHAR" />
+
+		</table>
+
+		<table tableName="CALL_CDR_DATA_ROUTING" domainObjectName="CallCdrDataRouting"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="COUNTRY_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PREFIX_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUT_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="QUANTITY" javaType="Long" />
+
+		</table>
+		
+			<table tableName="KPI_RP_CDR_DATA_CALL" domainObjectName="KpiRpCdrDataCall"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="LOCAL_DATETIME"/>
+			<columnOverride column="COUNTRY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DURTATION" javaType="Long" />
+			<columnOverride column="ATTEMPT" javaType="Long" />
+			<columnOverride column="ACD" javaType="Long" />
+			<columnOverride column="ASR" javaType="Long" />
+			<columnOverride column="NER" javaType="Long" />
+			<columnOverride column="CLI" javaType="Long" />
+			
+		</table>
+		
+		<!--Tien  -->
+		<table tableName="CALL_RATE" domainObjectName="CallRate"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" > 
+			   
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="PARTNER" javaType="String" jdbcType="VARCHAR" /> 
+			<columnOverride column="DESTINATION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY_CODE" javaType="Integer" />
+			<columnOverride column="AREA_CODE" javaType="Integer" /> 
+			<columnOverride column="REMARK" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="RATE" javaType="Integer" />
+			<columnOverride column="CREATE_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_DATE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LENGTH_CODE" javaType="Integer" />
+			<columnOverride column="UNIT" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="SYS_PARTNER" domainObjectName="SysPartners"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" > 
+			   
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="ALIAS" javaType="String" jdbcType="VARCHAR" /> 
+			<columnOverride column="ROUTE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ROUTE_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CREATE_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_DATE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="INT_PARTNER" javaType="Integer" />
+		</table>
+		
+		<table tableName="PHONG_BAN" domainObjectName="PhongBan"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="ID" javaType="Integer" />
+			
+			<columnOverride column="MA_PHONG" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="TEN_VIET_TAT" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="TEN_PHONG" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="DIEN_THOAI" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="EMAIL" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="FAX" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="DIA_CHI" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="IS_SPECIAL" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="IS_ENABLE" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="NVARCHAR" />
+		</table>
+		
+		<table tableName="SYS_MENU" domainObjectName="SysMenu"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="ORDERING" javaType="Integer" />
+			<columnOverride column="ID_HAS" javaType="Integer" />
+			
+			<columnOverride column="MENU_NAME" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MENU_LABLE" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MODULE_NAME" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="IS_PARENT" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="APP_CODE" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MA_PHONG" javaType="String" jdbcType="NVARCHAR" />
+		</table>
+		
+		<table tableName="SYS_RESPONSIBILITIES" domainObjectName="SysResponsibilities"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="ID_MENU" javaType="Integer" />
+			
+			<columnOverride column="DESCRIPTION" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="INSERTED" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="UPDATED" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="DELETED" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="GROUP_NAME" javaType="String" jdbcType="NVARCHAR" />
+		</table>
+		
+		<table tableName="SYS_GROUP_USER" domainObjectName="SysGroupUser"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="ORDERING" javaType="Integer" />
+			
+			<columnOverride column="GROUP_NAME" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="DESCRIPTION" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MA_PHONG" javaType="String" jdbcType="NVARCHAR" />
+		</table>
+		
+		<table tableName="SYS_USER_ROLES" domainObjectName="SysUserRoles"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="ID" javaType="Integer" />
+			
+			<columnOverride column="DESCRIPTION" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="GROUP_NAME" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="USER_NAME" javaType="String" jdbcType="NVARCHAR" />
+		</table>
+		
+		<table tableName="USERS_COGENCY_LEVEL" domainObjectName="UsersCogencyLevel"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="ID" javaType="Integer" />
+			
+			<columnOverride column="LEVER" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="USER_NAME" javaType="String" jdbcType="NVARCHAR" />
+		</table>
+		
+		<table tableName="KPI_RP_DATA_LOAIDV" domainObjectName="KpiRpDataLoaiDv"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="LOCAL_DATETIME" />
+			<columnOverride column="COUNTRY" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="PARTNER" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="DESTINATION" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="LOAI_DV" javaType="String" jdbcType="NVARCHAR" />
+			<columnOverride column="CALL_DURATION_ROUNDUP" javaType="Long" />
+			<columnOverride column="ATTEMPT" javaType="Long" />
+			<columnOverride column="STOP_COUNT" javaType="Long" />
+			<columnOverride column="SEIZURE_COUNT" javaType="Long" />
+			<columnOverride column="VALID_SEIZURE_COUNT" javaType="Long" />
+			<columnOverride column="CLI" javaType="Long" />
+		</table>
+		
+		<!-- CVQT  -->
+		<table tableName="RP_CONTRACT_IOT" domainObjectName="RpContractIOT"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="GIA_CUOC" javaType="Integer" />
+			<columnOverride column="TIEN_CAM_KET" javaType="Integer" />
+			<columnOverride column="LOAI_DICH_VU" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SU_DUNG_THUC_TE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CHENH_LECH" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PHAT_HANH" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TI_LE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NHA_MANG" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="CVQT_CONTRACT" domainObjectName="CvqtContract"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="COUNTRY" javaType="NVARCHAR" />
+			<columnOverride column="NETWORK" javaType="NVARCHAR" />
+			<columnOverride column="GIA_HAN" javaType="Integer" />
+			<columnOverride column="DATA_CAP" javaType="NVARCHAR" />
+			<columnOverride column="CONTRACT_TYPE" javaType="Integer" />
+			<columnOverride column="CAM_KET" javaType="NVARCHAR" />
+			<columnOverride column="TADIG" javaType="NVARCHAR" />
+			<columnOverride column="GIA_HAN" javaType="Integer" />
+			<columnOverride column="CK_INBOUND" javaType="Integer" />
+			<columnOverride column="CK_OUTBOUND" javaType="Integer" />
+			<columnOverride column="LOCAL" javaType="Integer" />
+			<columnOverride column="HOME" javaType="Integer" />
+			<columnOverride column="INTL" javaType="Integer" />
+			<columnOverride column="MTC" javaType="Integer" />
+			<columnOverride column="SMS_MO" javaType="Integer" />
+			<columnOverride column="SMS_MT" javaType="Integer" />
+			<columnOverride column="GPRS" javaType="Integer" />
+			
+		</table>
+		
+		<table tableName="CVQT_INBOUND_OUTBOUND" domainObjectName="CvqtInboundOutbound"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="TB_LU" javaType="Integer" />
+			<columnOverride column="PSC_TOTAL" javaType="Integer" />
+			<columnOverride column="PSC_DATA" javaType="Integer" />
+			<columnOverride column="TL_PSC_TOTAL" javaType="Integer" />
+			<columnOverride column="TL_PSC_DATA" javaType="Integer" />
+			<columnOverride column="MOC" javaType="Integer" />
+			<columnOverride column="MTC" javaType="Integer" />
+			<columnOverride column="SMS" javaType="Integer" />
+			<columnOverride column="DATA" javaType="Integer" />
+			<columnOverride column="DT_CVQT" javaType="Integer" />
+			<columnOverride column="DT_DATA" javaType="Integer" />
+			<columnOverride column="DT_GOI_CUOC" javaType="Integer" />
+			<columnOverride column="DATA_TYPE" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="IR_PLMN" domainObjectName="IrPlmn"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="TADIGNAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MCCODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MNCODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CCODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NDCODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IACODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NACODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DCODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TAPIN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TAPOUT" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TAPINTAX" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TAPOUTTAX" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SDRTHRESHOLD" javaType="Integer" />
+			<columnOverride column="HSTATUS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="HETIME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="VSTATUS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="VETIME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TAPINSEQ" javaType="Integer" />
+			<columnOverride column="NEXTSEQ" javaType="Integer" />
+			<columnOverride column="RAPOUTSEQ" javaType="Integer" />
+			<columnOverride column="RAPINSEQ" javaType="Integer" />
+			<columnOverride column="PLMN_ID" javaType="Integer" />
+			<columnOverride column="VIMSITHRESHOLD" javaType="Integer" />
+			<columnOverride column="HIMSITHRESHOLD" javaType="Integer" />
+			<columnOverride column="DESCRIPTION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EMAIL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="HURSEQ" javaType="Integer" />
+			<columnOverride column="VGPRS_STATUS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TDGPRS_SEQ" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CONTI_CODE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TAP_VERSION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TESTTAPINSEQ" javaType="Integer" />
+			<columnOverride column="HGPRS_STATUS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IN_PREPAID_STATUS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TDPREPAID_SEQ" javaType="Integer" />
+			<columnOverride column="SERVICE" javaType="Integer" />
+			<columnOverride column="UTC" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="DY_DATA_INBOUND" domainObjectName="DyDataInbound"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NHA_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LUU_LUONG" javaType="Integer" />
+			<columnOverride column="TIEN" javaType="Integer" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			
+		</table>
+		
+		<table tableName="DY_DATA_OUTBOUND" domainObjectName="DyDataOutbound"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NHA_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LUU_LUONG" javaType="Integer" />
+			<columnOverride column="TIEN" javaType="Integer" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			
+		</table>
+		
+		<table tableName="SYS_SOFT_SIM_PARTNER" domainObjectName="SysSoftSimPartner"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer"/>
+			<columnOverride column="NGAY"/>
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TIEN" javaType="Integer" />
+			<columnOverride column="TONG_SO_GOI" javaType="Integer" />
+			<columnOverride column="SO_GOI_DA_SU_DUNG" javaType="Integer" />
+			<columnOverride column="GOI_CUOC" javaType="String" jdbcType="VARCHAR" />		
+		</table>
+		
+		<table tableName="SYS_SOFT_SIM_INFO" domainObjectName="SysSoftSimInfo"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer"/>
+			<columnOverride column="GOI_CUOC" javaType="String" jdbcType="VARCHAR"/>
+			<columnOverride column="DURATION" javaType="Integer" />
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TIEN" javaType="Integer" />
+			<columnOverride column="TONG_LUU_LUONG" javaType="Integer" />
+		</table>
+		
+		<table tableName="SYS_FIRST_NUMBER_PARTNER" domainObjectName="SysFirstNumberPartner"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer"/>
+			<columnOverride column="DAU_SO" javaType="Integer"/>
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LENGTH_DS" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+				
+		<table tableName="REPORT_SOFT_SIM" domainObjectName="ReportSoftSim"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="NGAY" />
+			<columnOverride column="GOI_CUOC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ISDN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TIEN" javaType="Integer" />
+			
+		</table>
+		
+		
+		<table tableName="SYS_SOFT_SIM_PARTNER" domainObjectName="sysSoftSimPartner"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="NGAY" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+			<columnOverride column="DOI_TAC" javaType="String" />
+			<columnOverride column="TIEN" javaType="Integer" />
+			<columnOverride column="GOI_CUOC" javaType="String" />
+			<columnOverride column="SO_LUONG_MUA" javaType="Integer" />
+			<columnOverride column="SO_GOI_DA_SU_DUNG" javaType="Integer" />	
+					
+		</table>
+		
+		<table tableName="SYS_SOFT_SIM_INFO" domainObjectName="sysSoftSimInfo"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="GOI_CUOC" jdbcType="String" />
+			<columnOverride column="DURATION" javaType="Integer" />
+			<columnOverride column="DOI_TAC" javaType="String" />
+			<columnOverride column="TIEN" javaType="Integer" />
+			<columnOverride column="TONG_LUU_LUONG" javaType="Integer" />
+			<columnOverride column="CREATE_DATE" javaType="TIMESTAMP" />	
+			<columnOverride column="MODIFY_DATE" javaType="TIMESTAMP" />	
+					
+		</table>
+		
+		<table tableName="DANH_SACH_DICH_VU" domainObjectName="quanlyDichVu"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="MA_DV" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_DV" javaType="VARCHAR" />
+			<columnOverride column="DU_LIEU" javaType="Integer" />
+			<columnOverride column="ID_HAS" javaType="Integer" />
+			<columnOverride column="ORDER_BY" javaType="Integer" />		
+					
+		</table>
+		
+		<table tableName="BAO_CAO_CHENH_LECH_THU_CHI" domainObjectName="BaoCaoChenhLechThuChi"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="COUNTRY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DETAIL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRYCODE" javaType="Integer" />
+			<columnOverride column="PARTNERNAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLS" javaType="Integer" />
+			<columnOverride column="DURATION" javaType="Integer" />
+			<columnOverride column="RATE_COST" javaType="Integer" />
+			<columnOverride column="COST" javaType="Integer" />
+			<columnOverride column="RATE_REVENUE" javaType="Integer" />
+			<columnOverride column="REVENUE" javaType="Integer" />
+			<columnOverride column="GROSS_PROFIT" javaType="Integer" />
+		</table>
+		<table tableName="SYS_ITFS_INFO" domainObjectName="SysItfsInfo"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="PARTNER_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ROUTE" javaType="String" jdbcType="VARCHAR" />
+			
+			<columnOverride column="CALLED_NUMBER" javaType="Integer" />
+			<columnOverride column="PREFIX" javaType="Integer" />
+			<columnOverride column="ID" javaType="Integer" />
+			
+			<columnOverride column="CREATE_DATE"  jdbcType="VARCHAR"/>
+			<columnOverride column="CREATED_BY" jdbcType="VARCHAR"/>
+			<columnOverride column="MODIFY_DATE"  jdbcType="VARCHAR"/>
+			<columnOverride column="MODIFIED_BY"  jdbcType="VARCHAR" />
+
+		</table>
+		
+		<table tableName="SYS_LDR_INFO" domainObjectName="SysLdrInfo"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="TEN_GOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MA_GOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LUU_LUONG_DUOC_SD" javaType="Integer" />
+			<columnOverride column="SO_TIEN" javaType="Integer" />
+		</table>
+		
+		<table tableName="REPORT_MOBIWIFI" domainObjectName="ReportMobiWifi"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CTKV" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG" javaType="Integer" />
+			<columnOverride column="DOANH_THU" javaType="Integer" />
+		</table>
+		
+		<table tableName="SYS_BLACKLIST" domainObjectName="SysBlacklist"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="DETAIL" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		<table tableName="CHOT_THANG" domainObjectName="ChotThang"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="THANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NAM" javaType="Integer" />
+			<columnOverride column="LOAI_SO_LIEU" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="KET_CUOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TIEN_DT" javaType="Integer" />
+			<columnOverride column="LUU_LUONG_DT" javaType="Integer" />
+			<columnOverride column="TIEN_CP" javaType="Integer" />
+			<columnOverride column="LUU_LUONG_CP" javaType="Integer" />
+			<columnOverride column="DANH_MUC_LA_MA" javaType="Integer" />
+			<columnOverride column="ID" javaType="Integer" />
+		</table>
+		<table tableName="SYS_DATAMALL_INFO" domainObjectName="SysDatamallInfo"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="PLAN_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PLAN_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MAX_DAY_ACTIVE" javaType="Integer" />
+			<columnOverride column="MAX_CAPACITY" javaType="Integer" />
+			<columnOverride column="DATA_PLAN_CURENCY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IS_ACTIVE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PLAN_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PRICE" javaType="Integer" />
+			<columnOverride column="MOBIFONE_PERCENTAGE" javaType="Integer" />
+		</table>
+		<table tableName="RP_KIEM_SOAT_ND_SMS_A2P" domainObjectName="RpKiemSoatNdSmsA2p"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="SENDER_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MAU_NOI_DUNG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TONG_SAN_LUONG" javaType="Integer" />
+			<columnOverride column="SAN_LUONG_THEO_MAU" javaType="Integer" />
+			<columnOverride column="SAN_LUONG_KHAC_MAU" javaType="Integer" />
+			<columnOverride column="TY_LE_THEO_MAU" javaType="Integer" />
+			<columnOverride column="TY_LE_KHAC_MAU" javaType="Integer" />
+		</table>
+		<table tableName="RP_SL_DT_SMS_A2P_DETAIL" domainObjectName="RpSlDtSmsA2pDetail"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LINH_VUC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DON_GIA" javaType="Integer" />
+			<columnOverride column="SO_LUONG" javaType="Integer" />
+			<columnOverride column="THANH_TIEN" javaType="Integer" />
+		</table>
+		
+		<table tableName="SMS_PN_BRN" domainObjectName="SmsPnBrn"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="SENDER_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="PHAN_LOAI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LINH_VUC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CTY_CHU_QUAN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CONTENT_DKY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SO_VB_KB_NOI_DUNG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NGUOI_TAO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NGUOI_SUA" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="CAU_HINH_CANH_BAO_SMS_A2P" domainObjectName="CauHinhCanhBaoSmsA2p"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="TY_LE_THANH_CONG" javaType="Integer" />
+			<columnOverride column="SAN_LUONG" javaType="Integer" />
+			<columnOverride column="PN_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NGUOI_TAO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NGUOI_SUA" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="WHOLESALE" domainObjectName="Wholesale"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="INCOMING_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUTGOING_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="INCOMING_DESTINATION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUTGOING_DESTINATION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="INCOMING_TIME_OF_USE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUTGOING_TIME_OF_USE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DURATION" javaType="Integer" />
+			<columnOverride column="REVENUE" javaType="Integer" />
+			<columnOverride column="COST" javaType="Integer" />
+		</table>
+		
+		<table tableName="SMS_DTTT_CHIEU_DI" domainObjectName="SmsDtttChieuDi"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="SAN_LUONG" javaType="Integer" />
+			<columnOverride column="DOANH_THU" javaType="Integer" />
+			<columnOverride column="TYPE_W" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="SMS_DTTT_CHIEU_DI_DETAIL" domainObjectName="SmsDtttChieuDiDetail"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="SAN_LUONG" javaType="Integer" />
+			<columnOverride column="DOANH_THU" javaType="Integer" />
+			<columnOverride column="TYPE_W" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLING_NUMBER" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="RP_CDR_DATA_CALL_ONNET" domainObjectName="RpCdrDataCallOnnet"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="IN_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUT_PARTNER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="COUNTRY_FROM" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TYPE_W" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALL_DURATION_ROUNDUP" javaType="Integer" />
+			<columnOverride column="RATE" javaType="Integer" />
+			<columnOverride column="UNIT" javaType="Integer" />
+			<columnOverride column="DESTINATION" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="PHAN_TACH_GOI_CUOC_CTKV" domainObjectName="PhanTachGoiCuocCtkv"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="IS_CORPORATE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NHOM_DICHVU" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="LOAI_TB" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DICH_VU" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="GOI_CUOC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DOANH_THU" javaType="Integer" />
+			<columnOverride column="CENTER" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="VHC_REPORT_IGW_DATA" domainObjectName="VhcReportIgwData"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="COUNTRY_TO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CALLED_NUMBER" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="EGRESS_TRUNK_GROUP" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="RECORD_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="OUT_PARTNER" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="V_DASHBOARD_SMS" domainObjectName="VDashboardSms"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="TUAN" javaType="Integer" />
+			<columnOverride column="THANG" javaType="Integer" />
+			<columnOverride column="NAM" javaType="Integer" />
+			<columnOverride column="NAMTUAN" javaType="Integer" />
+			<columnOverride column="NAMTHANG" javaType="Integer" />
+			<columnOverride column="SUCCESS_RATE" javaType="Integer" />
+			<columnOverride column="P2P_REVENUE" javaType="Integer" />
+			<columnOverride column="P2P_QUANTITY" javaType="Integer" />
+			<columnOverride column="P2P_SUCCESS_RATE" javaType="Integer" />
+			<columnOverride column="A2P_REVENUE" javaType="Integer" />
+			<columnOverride column="A2P_QUANTITY" javaType="Integer" />
+			<columnOverride column="A2P_SUCCESS_RATE" javaType="Integer" />
+			<columnOverride column="CP_P2P_SL" javaType="Integer" />
+			<columnOverride column="CP_P2P_CP" javaType="Integer" />
+			<columnOverride column="CP_P2P_TLTC" javaType="Integer" />
+		</table>
+		
+		<table tableName="SMS_CDR_DATA_ROUTER_LOG" domainObjectName="SmsCdrDataRouterLog"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="TRACE_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MESSAGE_PROCESSOR_NAME" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CORRELATION_ID" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MSISDN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SENDER_MSISDN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SENDER_MSISDN_TON" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SENDER_MSISDN_NPI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MSC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SGSN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_MSC_SGSN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="GT_FROM_MT_MESSAGE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SMSC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_MAP_SERVICE_CENTRE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MT_ACTION" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TENANT" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="RESULT" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SMTP_DCS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SMTP_FLAGS" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SMTP_USER_DATA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="FILE_NAME" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="LUU_LUONG_THOAI_QT" domainObjectName="LuuLuongThoaiQt"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="THANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CHIEU_DI" javaType="Integer" />
+			<columnOverride column="CHIEU_VE" javaType="Integer" />
+			<columnOverride column="FILE_ID" javaType="Integer" />
+			<columnOverride column="NGUOI_TAO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NGUOI_SUA" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="LUU_LUONG_THOAI_QT" domainObjectName="LuuLuongThoaiQt"
+			   enableSelectByExample="false" enableDeleteByExample="false"
+			   enableCountByExample="false" enableUpdateByExample="false" >
+
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="THANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CHIEU_DI" javaType="Integer" />
+			<columnOverride column="CHIEU_VE" javaType="Integer" />
+			<columnOverride column="FILE_ID" javaType="Integer" />
+			<columnOverride column="NGUOI_TAO" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="NGUOI_SUA" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+    	<table tableName="SYS_FILE" domainObjectName="SysFile" 
+			enableSelectByExample="false" enableDeleteByExample="false" 
+			enableCountByExample="false" enableUpdateByExample="false">
+				
+			<columnOverride column="ID" javaType="Integer" />
+			<columnOverride column="COUNTER" javaType="Integer" />
+			<columnOverride column="FILE_SIZE" javaType="Long" />
+	        <columnOverride column="FILE_NAME" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="FILE_EXTEND" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="FILE_PATH" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="FILE_STATUS" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="FILE_TYPE" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="CREATE_BY" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="MA_PHONG" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="IP" javaType="String" jdbcType="VARCHAR" />
+	        <columnOverride column="MAPPING_TYPE" javaType="String" jdbcType="VARCHAR" />
+    	</table>
+    	
+    	<!-- chien -->
+    	<table tableName="RP_SL_DT_GC_CVQT_OUTBOUND" domainObjectName="RpSlDtGcCvqtOutbound"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<!-- 
+			<columnOverride column="NGAY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_GOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CTKV" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG_MOC" javaType="Double" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG_MTC" javaType="Double" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG_SMS_MO" javaType="Double" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG_SMS_MT" javaType="Double" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG_DATA" javaType="Double" jdbcType="VARCHAR" />
+			 -->
+			<columnOverride column="NGAY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_GOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CTKV" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG_MOC" javaType="Double"/>
+			<columnOverride column="SAN_LUONG_MTC" javaType="Double"/>
+			<columnOverride column="SAN_LUONG_SMS_MO" javaType="Double"/>
+			<columnOverride column="SAN_LUONG_SMS_MT" javaType="Double"/>
+			<columnOverride column="SAN_LUONG_DATA" javaType="Double"/>
+		</table>
+		
+		<table tableName="RP_SL_DT_GC_CVQT_OUT_DAILY" domainObjectName="RpSlDtGcCvqtOutDaily"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="NGAY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_GOI" javaType="String"/>
+			<columnOverride column="SO_GOI" javaType="Double"/>
+			<columnOverride column="DOANH_THU" javaType="Double" />
+
+		</table>
+		
+		<table tableName="RP_IMSI_LU" domainObjectName="RpImsiLu"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="NGAY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MA_QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MA_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG" javaType="Double" />
+
+		</table>
+		<table tableName="RP_IMSI_PSC" domainObjectName="RpImsiPsc"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="NGAY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MA_QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MA_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG" javaType="Double" />
+
+		</table>
+		<table tableName="RP_IMSI_SILENT" domainObjectName="RpImsiSilent"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="NGAY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="IMSI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MA_QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MA_MANG" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG" javaType="Double" />
+
+		</table>
+
+    	<!-- Dong bao cao -->
+    	<table tableName="RP_GC_CVQT_OUTBOUND_LUOT_DKY" domainObjectName="RpGcCvqtOutboundLuotDky"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			
+			<columnOverride column="TEN_GOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DKY_TYPE" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="ISDN" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SO_LUOT_DKY" javaType="Integer"  />
+			
+		</table>
+		
+		<table tableName="SYS_GOI_CUOC_CVQT" domainObjectName="SysGoiCuocCvqt"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="ID" javaType="Integer"  />
+			<columnOverride column="MA_GOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="TEN_GOI" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="CREATED_BY" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="MODIFIED_BY" javaType="String" jdbcType="VARCHAR" />
+		</table>
+		
+		<table tableName="RP_DATA_TB_CVQT" domainObjectName="RpDataTbCvqt"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="QUOC_GIA" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="SAN_LUONG" javaType="Integer" />			
+		</table>
+		
+		<table tableName="RP_DATA_TB_CVQT_DETAIL" domainObjectName="RpDataTbCvqtDetail"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="QUOC_GIA" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="DIA_CHI" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="CTKV" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="SAN_LUONG" javaType="Integer" />			
+		</table>
+			
+		<table tableName="IMPORT_EMAIL_GLC_TEMP" domainObjectName="ImportEmailGlc"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="FROM_EMAIL" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="TO_EMAIL" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="CC_EMAIL" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="SUBJECT_EMAIL" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="CONTENT_EMAIL" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="NUMBER_EMAIL" javaType="String" jdbcType="VARCHAR"  />
+		</table>
+			
+		<table tableName="RP_DT_DICH_VU_DCB" domainObjectName="RpDtDichVuDcb"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="TONG_DT" javaType="Integer" />
+			<columnOverride column="REFUND" javaType="Integer" />
+			<columnOverride column="CANCEL" javaType="Integer" />
+		</table>
+			
+		<table tableName="V_RP_SIMBOX_DAILY" domainObjectName="RpSimboxDaily"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="C_NAME" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="C_SYMBOX_TYPE" javaType="Integer" />
+			<columnOverride column="C_DAY_TOTAL" javaType="Integer" />
+		</table>
+		<table tableName="RP_HDCK_CVQT" domainObjectName="RpHdckCvqt"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			
+			<columnOverride column="TEN_QUOC_GIA" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="SAN_LUONG_THOAI" javaType="Double" />
+			<columnOverride column="SAN_LUONG_SMS" javaType="Double" />
+			<columnOverride column="SAN_LUONG_DATA" javaType="Double" />
+			<columnOverride column="SO_TIEN" javaType="Double" />
+			<columnOverride column="CAM_KET" javaType="Double" />
+			<columnOverride column="NGUONG" javaType="Double" />
+		</table>
+			
+		<table tableName="RP_DT_CP_SMS_WHOLESALE" domainObjectName="RpDtCpSmsWholesale"
+			enableSelectByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false" enableUpdateByExample="false" >
+			<columnOverride column="DOI_TAC" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="LUU_LUONG" javaType="Integer"  />
+			<columnOverride column="DOANH_THU" javaType="Integer"  />
+			<columnOverride column="CHI_PHI" javaType="Integer"  />
+			<columnOverride column="QUOC_GIA" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="MA_MANG" javaType="String" jdbcType="VARCHAR"  />
+			<columnOverride column="TEN_MANG" javaType="String" jdbcType="VARCHAR"  />
+		</table>
+	</context>
+	
+</generatorConfiguration>
