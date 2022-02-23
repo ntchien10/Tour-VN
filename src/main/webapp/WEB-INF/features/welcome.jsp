@@ -17,48 +17,48 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 
 		<!-- TITLE OF SITE -->
-		<title>TourVN Travel</title>
+		<title>Travel</title>
 
 		<!-- favicon img -->
-		<link rel="shortcut icon" type="image/icon" href="/TourVN/src/main/webapp/resources/logo/favicon.png"/>
+		<link rel="shortcut icon" type="image/icon" href="<c:url value="/resources/logo/favicon.png" />"/>
 
 		<!--font-awesome.min.css-->
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="<c:url value="/resources/css/font-awesome.min.css"  />"/>
 
 		<!--animate.css-->
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/animate.css" />
+		<link rel="stylesheet" href="<c:url value="/resources/css/animate.css"  />"/>
 
 		<!--hover.css-->
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/hover-min.css">
+		<link rel="stylesheet" href="<c:url value="/resources/css/hover-min.css" />">
 
 		<!--datepicker.css-->
-		<link rel="stylesheet"  href="/TourVN/src/main/webapp/resources/css/datepicker.css" >
+		<link rel="stylesheet"  href="<c:url value="/resources/css/datepicker.css"  />">
 
 		<!--owl.carousel.css-->
-        <link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/owl.theme.default.min.css"/>
+        <link rel="stylesheet" href="<c:url value="/resources/css/owl.carousel.min.css" />">
+		<link rel="stylesheet" href="<c:url value="/resources/css/owl.theme.default.min.css" />"/>
 
 		<!-- range css-->
-        <link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/jquery-ui.min.css" />
+        <link rel="stylesheet" href="<c:url value="/resources/css/jquery-ui.min.css"  />"/>
 
 		<!--bootstrap.min.css-->
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="<c:url value="/resources/css/bootstrap.min.css"  />"/>
 
 		<!-- bootsnav -->
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/bootsnav.css"/>
+		<link rel="stylesheet" href="<c:url value="/resources/css/bootsnav.css" />"/>
 
 		<!--style.css-->
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/datepicker.css" />
+		<link rel="stylesheet" href="<c:url value="/resources/css/style.css" />" />
 
 		<!--responsive.css-->
-		<link rel="stylesheet" href="/TourVN/src/main/webapp/resources/css/responsive.css" />
+		<link rel="stylesheet" href="<c:url value="/resources/css/responsive.css"  />"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 
 		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
 	</head>
@@ -92,12 +92,12 @@
 								</div><!-- /.navbar-header-->
 								<div class="collapse navbar-collapse">		  
 									<ul class="nav navbar-nav navbar-right">
-										<li class="smooth-menu"><a href="#home">home</a></li>
-										<li class="smooth-menu"><a href="#gallery">Destination</a></li>
-										<li class="smooth-menu"><a href="#pack">Packages </a></li>
-										<li class="smooth-menu"><a href="#spo">Special Offers</a></li>
-										<li class="smooth-menu"><a href="#blog">blog</a></li>
-										<li class="smooth-menu"><a href="#subs">subscription</a></li>
+										<li class="smooth-menu"><a href="#home">Trang chủ</a></li>
+										<li class="smooth-menu"><a href="#gallery">Điểm đến</a></li>
+										<li class="smooth-menu"><a href="#pack">Gói </a></li>
+										<li class="smooth-menu"><a href="#spo">Ưu đãi</a></li>
+										<li class="smooth-menu"><a href="#blog">Tin tức</a></li>
+										<li class="smooth-menu"><a href="#subs">Đăng ký</a></li>
 										<li>
 											<button class="book-btn">book now
 											</button>
@@ -124,7 +124,7 @@
 							<div class="single-about-us">
 								<div class="about-us-txt">
 									<h2>
-										Explore the Beauty of the Beautiful World 
+										Explore the Beauty of the Vienam
 
 									</h2>
 									<div class="about-btn">
@@ -167,7 +167,7 @@
 									<li role="presentation">
 										<a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">
 											<i class="fa fa-building"></i>
-											hotels
+											Khách sạn
 										</a>
 									</li>
 
@@ -189,7 +189,7 @@
 												<div class="col-lg-4 col-md-4 col-sm-12">
 													<div class="single-tab-select-box">
 
-														<h2>destination</h2>
+														<h2>Điểm đến</h2>
 
 														<div class="travel-select-icon">
 															<select class="form-control ">
@@ -222,7 +222,7 @@
 
 												<div class="col-lg-2 col-md-3 col-sm-4">
 													<div class="single-tab-select-box">
-														<h2>check in</h2>
+														<h2>Ngày đến</h2>
 														<div class="travel-check-icon">
 															<form action="#">
 																<input type="text" name="check_in" class="form-control" data-toggle="datepicker" placeholder="12 -01 - 2017 ">
@@ -233,7 +233,7 @@
 
 												<div class="col-lg-2 col-md-3 col-sm-4">
 													<div class="single-tab-select-box">
-														<h2>check out</h2>
+														<h2>Ngày đi</h2>
 														<div class="travel-check-icon">
 															<form action="#">
 																<input type="text" name="check_out" class="form-control"  data-toggle="datepicker" placeholder="22 -01 - 2017 ">
@@ -244,7 +244,7 @@
 
 												<div class="col-lg-2 col-md-1 col-sm-4">
 													<div class="single-tab-select-box">
-														<h2>duration</h2>
+														<h2>Lịch trình</h2>
 														<div class="travel-select-icon">
 															<select class="form-control ">
 
@@ -262,7 +262,7 @@
 
 												<div class="col-lg-2 col-md-1 col-sm-4">
 													<div class="single-tab-select-box">
-														<h2>members</h2>
+														<h2>số người</h2>
 														<div class="travel-select-icon">
 															<select class="form-control ">
 
@@ -606,7 +606,7 @@
 					<div class="col-md-4 col-sm-4">
 						<div class="single-service-box">
 							<div class="service-img">
-								<img src="/TourVN/src/main/webapp/resources/images/service/s1.png" alt="service-icon" />
+								<img src="<c:url value="/resources/images/service/s1.png" />" alt="service-icon" />
 							</div><!--/.service-img-->
 							<div class="service-content">
 								<h2>
@@ -622,7 +622,7 @@
 					<div class="col-md-4 col-sm-4">
 						<div class="single-service-box">
 							<div class="service-img">
-								<img src="/TourVN/src/main/webapp/resources/images/service/s2.png" alt="service-icon" />
+								<img src="<c:url value="/resources/images/service/s2.png" />" alt="service-icon" />
 							</div><!--/.service-img-->
 							<div class="service-content">
 								<h2>
@@ -638,7 +638,7 @@
 					<div class="col-md-4 col-sm-4">
 						<div class="single-service-box">
 							<div class="statistics-img">
-								<img src="/TourVN/src/main/webapp/resources/images/service/s3.png" alt="service-icon" />
+								<img src="<c:url value="/resources/images/service/s3.png" />" alt="service-icon" />
 							</div><!--/.service-img-->
 							<div class="service-content">
 
@@ -677,7 +677,7 @@
 
 						  			<div class="col-md-6">
 						  				<div class="filtr-item">
-											<img src="/TourVN/src/main/webapp/resources/images/gallary/g1.jpg" alt="portfolio image"/>
+											<img src="<c:url value="/resources/images/gallary/g1.jpg" />" alt="portfolio image"/>
 											<div class="item-title">
 												<a href="#">
 													china
@@ -689,7 +689,7 @@
 
 						  			<div class="col-md-6">
 						  				<div class="filtr-item">
-											<img src="/TourVN/src/main/webapp/resources/images/gallary/g2.jpg" alt="portfolio image"/>
+											<img src="<c:url value="/resources/images/gallary/g2.jpg" />" alt="portfolio image"/>
 											<div class="item-title">
 												<a href="#">
 													venuzuala
@@ -701,7 +701,7 @@
 
 						  			<div class="col-md-4">
 						  				<div class="filtr-item">
-											<img src="/TourVN/src/main/webapp/resources/images/gallary/g3.jpg" alt="portfolio image"/>
+											<img src="<c:url value="/resources/images/gallary/g3.jpg" />" alt="portfolio image"/>
 											<div class="item-title">
 												<a href="#">
 													brazil
@@ -713,7 +713,7 @@
 
 						  			<div class="col-md-4">
 						  				<div class="filtr-item">
-											<img src="/TourVN/src/main/webapp/resources/images/gallary/g4.jpg" alt="portfolio image"/>
+											<img src="<c:url value="/resources/images/gallary/g4.jpg" />" alt="portfolio image"/>
 											<div class="item-title">
 												<a href="#">
 													australia 
@@ -725,7 +725,7 @@
 
 						  			<div class="col-md-4">
 						  				<div class="filtr-item">
-											<img src="/TourVN/src/main/webapp/resources/images/gallary/g5.jpg" alt="portfolio image"/>
+											<img src="<c:url value="/resources/images/gallary/g5.jpg" />" alt="portfolio image"/>
 											<div class="item-title">
 												<a href="#">
 													netharland
@@ -737,7 +737,7 @@
 
 						  			<div class="col-md-8">
 						  				<div class="filtr-item">
-											<img src="/TourVN/src/main/webapp/resources/images/gallary/g6.jpg" alt="portfolio image"/>
+											<img src="<c:url value="/resources/images/gallary/g6.jpg" />" alt="portfolio image"/>
 											<div class="item-title">
 												<a href="#">
 													turkey
@@ -765,7 +765,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="dicount-offer-content text-center">
-							<h2>Join with us within 21 January, 2018 and get upto 40% Discount</h2>
+							<h2>Tham gia với chúng tôi ngày 05/05/2022 để được giảm 40%</h2>
 							<div class="campaign-timer">
 								<div id="timer">
 									<div class="time time-after" id="days">
@@ -784,7 +784,7 @@
 							</div><!--/.campaign-timer-->
 							<div class="about-btn">
 								<button  class="about-view discount-offer-btn">
-									join now
+									Tham gia ngay
 								</button>
 							</div><!--/.about-btn-->
 
@@ -802,7 +802,7 @@
 			<div class="container">
 				<div class="gallary-header text-center">
 					<h2>
-						special packages
+						Gói đặc biệt
 					</h2>
 					<p>
 						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.  
@@ -813,9 +813,9 @@
 
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
-								<img src="/TourVN/src/main/webapp/resources/images/packages/p1.jpg" alt="package-place">
+								<img src="<c:url value="/resources/images/packages/p1.jpg" />" alt="package-place">
 								<div class="single-package-item-txt">
-									<h3>italy <span class="pull-right">$499</span></h3>
+									<h3>Đà nẵng <span class="pull-right">5.000.000VNĐ</span></h3>
 									<div class="packages-para">
 										<p>
 											<span>
@@ -852,7 +852,7 @@
 
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
-								<img src="/TourVN/src/main/webapp/resources/images/packages/p2.jpg" alt="package-place">
+								<img src="<c:url value="/resources/images/packages/p2.jpg" />" alt="package-place">
 								<div class="single-package-item-txt">
 									<h3>england <span class="pull-right">$1499</span></h3>
 									<div class="packages-para">
@@ -891,7 +891,7 @@
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
-								<img src="/TourVN/src/main/webapp/resources/images/packages/p3.jpg" alt="package-place">
+								<img src="<c:url value="/resources/images/packages/p3.jpg" />" alt="package-place">
 								<div class="single-package-item-txt">
 									<h3>france <span class="pull-right">$1199</span></h3>
 									<div class="packages-para">
@@ -930,7 +930,7 @@
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
-								<img src="/TourVN/src/main/webapp/resources/images/packages/p4.jpg" alt="package-place">
+								<img src="<c:url value="/resources/images/packages/p4.jpg" />" alt="package-place">
 								<div class="single-package-item-txt">
 									<h3>india <span class="pull-right">$799</span></h3>
 									<div class="packages-para">
@@ -969,7 +969,7 @@
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
-								<img src="/TourVN/src/main/webapp/resources/images/packages/p5.jpg" alt="package-place">
+								<img src="<c:url value="/resources/images/packages/p5.jpg" />" alt="package-place">
 								<div class="single-package-item-txt">
 									<h3>spain <span class="pull-right">$999</span></h3>
 									<div class="packages-para">
@@ -1008,7 +1008,7 @@
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
-								<img src="/TourVN/src/main/webapp/resources/images/packages/p6.jpg" alt="package-place">
+								<img src="<c:url value="/resources/images/packages/p6.jpg" />" alt="package-place">
 								<div class="single-package-item-txt">
 									<h3>thailand <span class="pull-right">$799</span></h3>
 									<div class="packages-para">
@@ -1058,10 +1058,10 @@
 
 				<div class="gallary-header text-center">
 					<h2>
-						clients reviews
+						Đánh giá của khách hàng
 					</h2>
 					<p>
-						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla. 
+						Sự hài lòng của quý khách luôn là tiêu chí hàng đầu của chúng tôi!
 					</p>
 
 				</div><!--/.gallery-header-->
@@ -1071,18 +1071,41 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial1.jpg" alt="img"/>
+								<img src="<c:url value="/resources/images/client/testimonial1.jpg" />" alt="img"/>
 							</div><!--/.home1-testm-img-->
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Dịch vụ tốt, thắng cảnh đẹp, lịch trình hợp lí, dịch vụ đi lại tốt, giá cả ok. Nói chung là rất tốt, mọi người tham khảo.
 								</p>
 								<h3>
 									<a href="#">
-										kevin watson
+										Thế Chiến
+									</a>
+								</h3>
+								<h4>Đà nẵng</h4>
+							</div><!--/.home1-testm-txt-->	
+						</div><!--/.home1-testm-single-->
+
+					</div><!--/.item-->
+
+					<div class="home1-testm item">
+						<div class="home1-testm-single text-center">
+							<div class="home1-testm-img">
+								<img src="<c:url value="/resources/images/client/testimonial2.jpg" />" alt="img"/>
+							</div><!--/.home1-testm-img-->
+							<div class="home1-testm-txt">
+								<span class="icon section-icon">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+								</span>
+								<p>
+									Dịch vụ tốt, thắng cảnh đẹp, lịch trình hợp lí, dịch vụ đi lại tốt, giá cả ok. Nói chung là rất tốt, mọi người tham khảo. 
+								</p>
+								<h3>
+									<a href="#">
+										Phương Đông
 									</a>
 								</h3>
 								<h4>london, england</h4>
@@ -1094,18 +1117,18 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial2.jpg" alt="img"/>
+								<img src="<c:url value="/resources/images/client/testimonial1.jpg" />" alt="img"/>
 							</div><!--/.home1-testm-img-->
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Dịch vụ tốt, thắng cảnh đẹp, lịch trình hợp lí, dịch vụ đi lại tốt, giá cả ok. Nói chung là rất tốt, mọi người tham khảo. 
 								</p>
 								<h3>
 									<a href="#">
-										kevin watson
+										Cáp
 									</a>
 								</h3>
 								<h4>london, england</h4>
@@ -1117,18 +1140,18 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial1.jpg" alt="img"/>
+								<img src="<c:url value="/resources/images/client/testimonial1.jpg" />" alt="img"/>
 							</div><!--/.home1-testm-img-->
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Dịch vụ tốt, thắng cảnh đẹp, lịch trình hợp lí, dịch vụ đi lại tốt, giá cả ok. Nói chung là rất tốt, mọi người tham khảo. 
 								</p>
 								<h3>
 									<a href="#">
-										kevin watson
+										V. Linh
 									</a>
 								</h3>
 								<h4>london, england</h4>
@@ -1140,18 +1163,18 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial1.jpg" alt="img"/>
+								<img src="<c:url value="/resources/images/client/testimonial2.jpg" />" alt="img"/>
 							</div><!--/.home1-testm-img-->
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Dịch vụ tốt, thắng cảnh đẹp, lịch trình hợp lí, dịch vụ đi lại tốt, giá cả ok. Nói chung là rất tốt, mọi người tham khảo. 
 								</p>
 								<h3>
 									<a href="#">
-										kevin watson
+										Lan
 									</a>
 								</h3>
 								<h4>london, england</h4>
@@ -1163,18 +1186,18 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial2.jpg" alt="img"/>
+								<img src="<c:url value="/resources/images/client/testimonial1.jpg" />" alt="img"/>
 							</div><!--/.home1-testm-img-->
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Dịch vụ tốt, thắng cảnh đẹp, lịch trình hợp lí, dịch vụ đi lại tốt, giá cả ok. Nói chung là rất tốt, mọi người tham khảo. 
 								</p>
 								<h3>
 									<a href="#">
-										kevin watson
+										Y. Linh
 									</a>
 								</h3>
 								<h4>london, england</h4>
@@ -1186,87 +1209,18 @@
 					<div class="home1-testm item">
 						<div class="home1-testm-single text-center">
 							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial1.jpg" alt="img"/>
+								<img src="<c:url value="/resources/images/client/testimonial1.jpg" />" alt="img"/>
 							</div><!--/.home1-testm-img-->
 							<div class="home1-testm-txt">
 								<span class="icon section-icon">
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Dịch vụ tốt, thắng cảnh đẹp, lịch trình hợp lí, dịch vụ đi lại tốt, giá cả ok. Nói chung là rất tốt, mọi người tham khảo. 
 								</p>
 								<h3>
 									<a href="#">
-										kevin watson
-									</a>
-								</h3>
-								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
-						</div><!--/.home1-testm-single-->
-
-					</div><!--/.item-->
-
-					<div class="home1-testm item">
-						<div class="home1-testm-single text-center">
-							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial1.jpg" alt="img"/>
-							</div><!--/.home1-testm-img-->
-							<div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
-								</p>
-								<h3>
-									<a href="#">
-										kevin watson
-									</a>
-								</h3>
-								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
-						</div><!--/.home1-testm-single-->
-
-					</div><!--/.item-->
-
-					<div class="home1-testm item">
-						<div class="home1-testm-single text-center">
-							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial2.jpg" alt="img"/>
-							</div><!--/.home1-testm-img-->
-							<div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
-								</p>
-								<h3>
-									<a href="#">
-										kevin watson
-									</a>
-								</h3>
-								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
-						</div><!--/.home1-testm-single-->
-
-					</div><!--/.item-->
-
-					<div class="home1-testm item">
-						<div class="home1-testm-single text-center">
-							<div class="home1-testm-img">
-								<img src="/TourVN/src/main/webapp/resources/images/client/testimonial1.jpg" alt="img"/>
-							</div><!--/.home1-testm-img-->
-							<div class="home1-testm-txt">
-								<span class="icon section-icon">
-									<i class="fa fa-quote-left" aria-hidden="true"></i>
-								</span>
-								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
-								</p>
-								<h3>
-									<a href="#">
-										kevin watson
+										Long
 									</a>
 								</h3>
 								<h4>london, england</h4>
@@ -1343,10 +1297,10 @@
 						<div class="col-sm-4">
 							<div class="single-special-offer">
 								<div class="single-special-offer-bg">
-									<img src="/TourVN/src/main/webapp/resources/images/offer/offer-shape.png" alt="offer-shape">
+									<img src="<c:url value="/resources/images/offer/offer-shape.png" />" alt="offer-shape">
 								</div><!--/.single-special-offer-bg-->
 								<div class="single-special-shape-txt">
-									<h3>special offer</h3>
+									<h3>Ưu đãi đặc biệt</h3>
 									<h4><span>40%</span><br>off</h4>
 									<p><span>$999</span><br>reguler $ 1450</p>
 								</div><!--/.single-special-shape-txt-->
@@ -1365,10 +1319,10 @@
 				<div class="blog-details">
 						<div class="gallary-header text-center">
 							<h2>
-								latest news
+								Tin mới nhất
 							</h2>
 							<p>
-								Travel News from all over the world 
+								Tin tức du lịch trong nước
 							</p>
 						</div><!--/.gallery-header-->
 						<div class="blog-content">
@@ -1378,7 +1332,7 @@
 									<div class="thumbnail">
 										<h2>trending news <span>15 november 2017</span></h2>
 										<div class="thumbnail-img">
-											<img src="/TourVN/src/main/webapp/resources/images/blog/b1.jpg" alt="blog-img">
+											<img src="<c:url value="/resources/images/blog/b1.jpg" />" alt="blog-img">
 											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
 										
 										</div><!--/.thumbnail-img-->
@@ -1404,7 +1358,7 @@
 									<div class="thumbnail">
 										<h2>trending news <span>15 november 2017</span></h2>
 										<div class="thumbnail-img">
-											<img src="/TourVN/src/main/webapp/resources/images/blog/b2.jpg" alt="blog-img">
+											<img src="<c:url value="/resources/images/blog/b2.jpg" />" alt="blog-img">
 											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
 										
 										</div><!--/.thumbnail-img-->
@@ -1429,7 +1383,7 @@
 									<div class="thumbnail">
 										<h2>trending news <span>15 november 2017</span></h2>
 										<div class="thumbnail-img">
-											<img src="/TourVN/src/main/webapp/resources/images/blog/b3.jpg" alt="blog-img">
+											<img src="<c:url value="/resources/images/blog/b3.jpg" />" alt="blog-img">
 											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
 										
 										</div><!--/.thumbnail-img-->
@@ -1460,18 +1414,18 @@
 			<div class="container">
 				<div class="subscribe-title text-center">
 					<h2>
-						Join our Subscribers List to Get Regular Update
+						Tham gia danh sách người đăng ký của chúng tôi để nhận thông tin cập nhật thường xuyên
 					</h2>
 					<p>
-						Subscribe Now. We will send you Best offer for your Trip 
+						Đăng ký ngay để nhận các ưu đãi mới nhất cho chuyến đi của bạn
 					</p>
 				</div>
 				<form>
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 							<div class="custom-input-group">
-								<input type="email" class="form-control" placeholder="Enter your Email Here">
-								<button class="appsLand-btn subscribe-btn">Subscribe</button>
+								<input type="email" class="form-control" placeholder="Nhập email">
+								<button class="appsLand-btn subscribe-btn">Đăng ký</button>
 								<div class="clearfix"></div>
 								<i class="fa fa-envelope"></i>
 							</div>
@@ -1494,7 +1448,7 @@
 							<div class="single-footer-item">
 								<div class="footer-logo">
 									<a href="index.html">
-										tour<span>Nest</span>
+										tour<span>VN</span>
 									</a>
 									<p>
 										best travel agency
@@ -1507,12 +1461,12 @@
 							<div class="single-footer-item">
 								<h2>link</h2>
 								<div class="single-footer-txt">
-									<p><a href="#">home</a></p>
-									<p><a href="#">destination</a></p>
-									<p><a href="#">spacial packages</a></p>
-									<p><a href="#">special offers</a></p>
-									<p><a href="#">blog</a></p>
-									<p><a href="#">contacts</a></p>
+									<p><a href="#">Trang chủ</a></p>
+									<p><a href="#">Điểm đến</a></p>
+									<p><a href="#">Gói</a></p>
+									<p><a href="#">Ưu đãi</a></p>
+									<p><a href="#">Tin tức</a></p>
+									<p><a href="#">Liên hệ</a></p>
 								</div><!--/.single-footer-txt-->
 							</div><!--/.single-footer-item-->
 
@@ -1520,25 +1474,25 @@
 
 						<div class="col-sm-3">
 							<div class="single-footer-item">
-								<h2>popular destination</h2>
+								<h2>Điểm đến phổ biến</h2>
 								<div class="single-footer-txt">
-									<p><a href="#">china</a></p>
-									<p><a href="#">venezuela</a></p>
-									<p><a href="#">brazil</a></p>
-									<p><a href="#">australia</a></p>
-									<p><a href="#">london</a></p>
+									<p><a href="#">Phú Quốc</a></p>
+									<p><a href="#">Đà Nẵng</a></p>
+									<p><a href="#">Huế</a></p>
+									<p><a href="#">Cà Mau</a></p>
+									<p><a href="#">Hà Giang</a></p>
 								</div><!--/.single-footer-txt-->
 							</div><!--/.single-footer-item-->
 						</div><!--/.col-->
 
 						<div class="col-sm-3">
 							<div class="single-footer-item text-center">
-								<h2 class="text-left">contacts</h2>
+								<h2 class="text-left">Liên hệ</h2>
 								<div class="single-footer-txt text-left">
-									<p>+1 (300) 1234 6543</p>
-									<p class="foot-email"><a href="#">info@tnest.com</a></p>
-									<p>North Warnner Park 336/A</p>
-									<p>Newyork, USA</p>
+									<p>0981397246</p>
+									<p class="foot-email"><a href="#">info@tourvn.com</a></p>
+									<p>30 Phung Khoang, Trung Van Ward, Nam Tu Liem District</p>
+									<p>Hanoi, Vietnam</p>
 								</div><!--/.single-footer-txt-->
 							</div><!--/.single-footer-item-->
 						</div><!--/.col-->
@@ -1549,11 +1503,11 @@
 				<hr>
 				<div class="foot-icons ">
 					<ul class="footer-social-links list-inline list-unstyled">
-		                <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+		                <li><a href="https://www.facebook.com/Tourvn-105292725412699" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
 		                <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
 		                <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
 		        	</ul>
-		        	<p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>
+		        	<p>&copy; 2022 <a href="https://www.tourvn.com">TourVN</a>. All Right Reserved</p>
 
 		        </div><!--/.foot-icons-->
 				<div id="scroll-Top">
@@ -1567,42 +1521,42 @@
 
 
 
-		<script src="/TourVN/src/main/webapp/resources/js/jquery.js"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/jquery.js" />"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 
 		<!--modernizr.min.js-->
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 
 		<!--bootstrap.min.js-->
-		<script  src="/TourVN/src/main/webapp/resources/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 
 		<!-- bootsnav js -->
-		<script src="/TourVN/src/main/webapp/resources/js/bootsnav.js"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/bootsnav.js" />"></script>
 
 		<!-- jquery.filterizr.min.js -->
-		<script src="/TourVN/src/main/webapp/resources/js/jquery.filterizr.min.js"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/jquery.filterizr.min.js" />"></script>
 
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 		<!--jquery-ui.min.js-->
-        <script src="/TourVN/src/main/webapp/resources/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="<c:url value="/resources/js/jquery-ui.min.js" />"></script>
 
         <!-- counter js -->
-		<script src="/TourVN/src/main/webapp/resources/js/jquery.counterup.min.js"></script>
-		<script src="/TourVN/src/main/webapp/resources/js/waypoints.min.js"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/jquery.counterup.min.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/waypoints.min.js" />"></script>
 
 		<!--owl.carousel.js-->
-        <script  src="/TourVN/src/main/webapp/resources/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="<c:url value="/resources/js/owl.carousel.min.js" />"></script>
 
         <!-- jquery.sticky.js -->
-		<script src="/TourVN/src/main/webapp/resources/js/jquery.sticky.js"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/jquery.sticky.js" />"></script>
 
         <!--datepicker.js-->
-        <script  src="/TourVN/src/main/webapp/resources/js/datepicker.js"></script>
+        <script type="text/javascript" src="<c:url value="/resources/js/datepicker.js"  />"></script>
 
 		<!--Custom JS-->
-		<script src="/TourVN/src/main/webapp/resources/js/custom.js"></script>
+		<script type="text/javascript" src="<c:url value="/resources/js/custom.js" />"></script>
 
 
 	</body>
