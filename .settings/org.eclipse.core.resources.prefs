@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
 encoding//src/main/java/com/tourvn/utils/Constants.java=UTF-8
-encoding//src/main/webapp/WEB-INF/features/welcome.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/features/admin/index.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/features/dashboard.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/features/user/welcome.jsp=UTF-8
